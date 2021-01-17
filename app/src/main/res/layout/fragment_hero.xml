@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tg_background">
+
+    <EditText
+        android:id="@+id/editTextPLayerName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="@string/player_name"
+        android:ems="10"
+        android:fontFamily="@font/esteban"
+        android:hint="@string/player_name"
+        android:inputType="textPersonName"
+        android:paddingStart="20dp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/tg_text"
+        android:textColorHint="@color/tg_text"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textCharacterName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textCharacterName" />
+
+    <TextView
+        android:id="@+id/textCharacterName"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/esteban"
+        android:paddingStart="20dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="8dp"
+        android:text="Test"
+        android:textAlignment="viewStart"
+        android:textColor="@color/tg_header"
+        android:textSize="@dimen/font_size_headerName"
+        app:layout_constraintEnd_toStartOf="@+id/editTextPLayerName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardFight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/card_margin"
+        app:cardBackgroundColor="@color/tg_card_background"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/cardDiplomacy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCharacterName">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editTextAggression"
+                style="@style/hero_paramValue"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autofillHints="@string/value_0"
+                android:ems="10"
+                android:hint="@string/value_0"
+                android:inputType="numberDecimal"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textAggression"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textAggression" />
+
+            <EditText
+                android:id="@+id/editTextCourage"
+                style="@style/hero_paramValue"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autofillHints="@string/value_0"
+                android:ems="10"
+                android:hint="@string/value_0"
+                android:inputType="numberDecimal"
+                android:textAlignment="center"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textCourage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textCourage" />
+
+            <EditText
+                android:id="@+id/editTextPracticality"
+                style="@style/hero_paramValue"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autofillHints="@string/value_0"
+                android:ems="10"
+                android:hint="@string/value_0"
+                android:inputType="numberDecimal"
+                android:textAlignment="center"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textPracticality"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textPracticality" />
+
+            <TextView
+                android:id="@+id/textAggression"
+                style="@style/hero_param"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/hero_aggression"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toStartOf="@+id/editTextAggression"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textPracticality"
+                style="@style/hero_param"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/hero_practicality"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toStartOf="@+id/editTextPracticality"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textCourage" />
+
+            <TextView
+                android:id="@+id/textCourage"
+                style="@style/hero_param"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/hero_courage"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toStartOf="@+id/editTextCourage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textAggression" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardDiplomacy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/card_margin"
+        app:cardBackgroundColor="@color/tg_card_background"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardFight"
+        app:layout_constraintTop_toBottomOf="@+id/textCharacterName">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editTextEmpathy"
+                style="@style/hero_paramValue"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autofillHints="@string/value_0"
+                android:ems="10"
+                android:hint="@string/value_0"
+                android:inputType="numberDecimal"
+                android:textAlignment="center"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textEmpathy"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textEmpathy" />
+
+            <EditText
+                android:id="@+id/editTextCaution"
+                style="@style/hero_paramValue"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autofillHints="@string/value_0"
+                android:ems="10"
+                android:hint="@string/value_0"
+                android:inputType="numberDecimal"
+                android:textAlignment="center"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textCaution"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textCaution" />
+
+            <EditText
+                android:id="@+id/editTextSpirituality"
+                style="@style/hero_paramValue"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autofillHints="@string/value_0"
+                android:ems="10"
+                android:hint="@string/value_0"
+                android:inputType="numberDecimal"
+                android:textAlignment="center"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textSpirituality"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textSpirituality" />
+
+            <TextView
+                android:id="@+id/textEmpathy"
+                style="@style/hero_param"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/hero_empathy"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toStartOf="@+id/editTextEmpathy"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textSpirituality"
+                style="@style/hero_param"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/hero_spirituality"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toStartOf="@+id/editTextSpirituality"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textCaution" />
+
+            <TextView
+                android:id="@+id/textCaution"
+                style="@style/hero_param"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/hero_caution"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toStartOf="@+id/editTextCaution"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textEmpathy" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardEnergy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/card_margin"
+        app:cardBackgroundColor="@color/tg_card_resource"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toStartOf="@id/cardHealth"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardFight">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                style="@style/hero_paramValue"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:autofillHints="@string/value_0"
+                android:ems="10"
+                android:hint="@string/value_0"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <TextView
+                style="@style/font_resources"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hero_energy" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardHealth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/card_margin"
+        app:cardBackgroundColor="@color/tg_card_resource"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toStartOf="@id/cardTerror"
+        app:layout_constraintStart_toEndOf="@+id/cardEnergy"
+        app:layout_constraintTop_toBottomOf="@id/cardFight">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                style="@style/hero_paramValue"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:autofillHints="@string/value_0"
+                android:ems="10"
+                android:hint="@string/value_0"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <TextView
+                style="@style/font_resources"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hero_health" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardTerror"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/card_margin"
+        app:cardBackgroundColor="@color/tg_card_resource"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardHealth"
+        app:layout_constraintTop_toBottomOf="@id/cardFight">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                style="@style/hero_paramValue"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:autofillHints="@string/value_0"
+                android:ems="10"
+                android:hint="@string/value_0"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <TextView
+                style="@style/font_resources"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hero_terror" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardFood"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/card_margin"
+        app:cardBackgroundColor="@color/tg_card_resource"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toStartOf="@id/cardWealth"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardEnergy">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                style="@style/hero_paramValue"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:autofillHints="@string/value_0"
+                android:ems="10"
+                android:hint="@string/value_0"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <TextView
+                style="@style/font_resources"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hero_food" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardWealth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/card_margin"
+        app:cardBackgroundColor="@color/tg_card_resource"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/cardRep"
+        app:layout_constraintStart_toEndOf="@id/cardFood"
+        app:layout_constraintTop_toBottomOf="@id/cardEnergy">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                style="@style/hero_paramValue"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:autofillHints="@string/value_0"
+                android:ems="10"
+                android:hint="@string/value_0"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <TextView
+                style="@style/font_resources"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/hero_wealth"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardRep"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/card_margin"
+        app:cardBackgroundColor="@color/tg_card_resource"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/cardExp"
+        app:layout_constraintStart_toEndOf="@id/cardWealth"
+        app:layout_constraintTop_toBottomOf="@id/cardEnergy">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                style="@style/hero_paramValue"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:autofillHints="@string/value_0"
+                android:ems="10"
+                android:hint="@string/value_0"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <TextView
+                style="@style/font_resources"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/hero_rep"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardExp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/card_margin"
+        app:cardBackgroundColor="@color/tg_card_resource"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toStartOf="@id/cardMagic"
+        app:layout_constraintStart_toEndOf="@id/cardRep"
+        app:layout_constraintTop_toBottomOf="@id/cardEnergy">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                style="@style/hero_paramValue"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:autofillHints="@string/value_0"
+                android:ems="10"
+                android:hint="@string/value_0"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <TextView
+                style="@style/font_resources"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/hero_exp"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardMagic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/card_margin"
+        app:cardBackgroundColor="@color/tg_card_magic"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cardExp"
+        app:layout_constraintTop_toBottomOf="@id/cardEnergy">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                style="@style/hero_paramValue"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:autofillHints="@string/value_0"
+                android:ems="10"
+                android:hint="@string/value_0"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <TextView
+                style="@style/font_resources"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/hero_magic"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/card_margin"
+        app:cardBackgroundColor="@color/tg_card_background"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardFood"
+        tools:layout_editor_absoluteX="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textPlayerNotes">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:fontFamily="@font/esteban"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/tg_text"
+                    android:textColorHint="@color/tg_text"
+                    android:textSize="14sp" />
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/textPlayerNotes"
+                style="@style/header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/player_notes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

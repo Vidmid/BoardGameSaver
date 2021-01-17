@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Board Game Saver</string>
+    <string name="hero_aggression">АГРЕССИВНОСТЬ</string>
+    <string name="hero_empathy">МИРОЛЮБИВОСТЬ</string>
+    <string name="value_0">0</string>
+    <string name="hero_courage">ХРАБРОСТЬ</string>
+    <string name="hero_caution">ОСТОРОЖНОСТЬ</string>
+    <string name="hero_practicality">ИЗВОРОТЛИВОСТЬ</string>
+    <string name="hero_spirituality">ОДУХОТВОРЕННОСТЬ</string>
+    <string name="char_Beor">Беор</string>
+    <string name="player_name">Введите имя игрока</string>
+    <string name="hero_food">ЕДА</string>
+    <string name="hero_wealth">ЗОЛОТО</string>
+    <string name="hero_rep">СЛАВА</string>
+    <string name="hero_exp">ОПЫТ</string>
+    <string name="hero_magic">МАГИЯ</string>
+    <string name="player_notes">Игровые заметки</string>
+    <string name="hero_energy">ЭНЕРГИЯ</string>
+    <string name="hero_health">ЖИЗНЬ</string>
+    <string name="hero_terror">СТРЕСС</string>
+    <string name="tainted_grail">Оскверненный Грааль</string>
+    <string name="navigation_heroes">Герои</string>
+    <string name="navigation_achievements">Ачивки</string>
+</resources>

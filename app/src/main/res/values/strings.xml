@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Board Game Saver</string>
+
+    <string name="hero_aggression">AGGRESSION</string>
+    <string name="hero_empathy">EMPATHY</string>
+    <string name="value_0">0</string>
+    <string name="hero_courage">COURAGE</string>
+    <string name="hero_caution">CAUTION</string>
+    <string name="hero_practicality">PRACTICALITY</string>
+    <string name="hero_spirituality">SPIRITUALITY</string>
+    <string name="char_Beor">Beor</string>
+    <string name="player_name">Enter player name</string>
+    <string name="hero_food">FOOD</string>
+    <string name="hero_wealth">WEALTH</string>
+    <string name="hero_rep">REP</string>
+    <string name="hero_exp">EXP</string>
+    <string name="hero_magic">MAGIC</string>
+    <string name="player_notes">Player notes:</string>
+    <string name="hero_energy">ENERGY</string>
+    <string name="hero_health">HEALTH</string>
+    <string name="hero_terror">TERROR</string>
+    <string name="tainted_grail">Tainted Grail</string>
+    <string name="navigation_heroes">Heroes</string>
+    <string name="navigation_achievements">Achievements</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

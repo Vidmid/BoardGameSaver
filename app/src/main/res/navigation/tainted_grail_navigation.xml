@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tainted_grail_navigation"
+    app:startDestination="@id/navigation_heroes">
+
+    <fragment
+        android:id="@+id/navigation_heroes"
+        android:name="com.example.android.boardgamesaver.taintedgrail.ui.heroes.HeroesFragment"
+        android:label="@string/char_Beor"
+        tools:layout="@layout/fragment_heroes" />
+    <fragment
+        android:id="@+id/navigation_achievements"
+        android:name="com.example.android.boardgamesaver.taintedgrail.ui.achievements.AchievementsFragment"
+        android:label="@string/navigation_achievements"
+        tools:layout="@layout/fragment_achievements" />
+    <fragment
+        android:id="@+id/heroBeorFragment2"
+        android:name="com.example.android.boardgamesaver.taintedgrail.ui.heroes.fragments.HeroBeorFragment"
+        android:label="HeroBeorFragment" />
+</navigation>
